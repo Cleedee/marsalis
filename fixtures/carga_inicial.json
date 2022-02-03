@@ -1,0 +1,42 @@
+[
+	{
+	 	"model" : "servico.TipoOcorrencia",
+		"pk" : 1,
+		"fields" : {
+			"nome" : "Repasse",
+			"codigo" : 1
+		}
+	},
+	{
+	 	"model" : "servico.TipoOcorrencia",
+		"pk" : 2,
+		"fields" : {
+			"nome" : "Dica de Solução",
+			"codigo" : 2
+		}
+	},
+	{
+	 	"model" : "servico.TipoOcorrencia",
+		"pk" : 3,
+		"fields" : {
+			"nome" : "Contato com Cliente",
+			"codigo" : 3
+		}
+	},
+	{
+	 	"model" : "servico.TipoOcorrencia",
+		"pk" : 4,
+		"fields" : {
+			"nome" : "Descritiva",
+			"codigo" : 4
+		}
+	},
+	{
+	 	"model" : "servico.TipoOcorrencia",
+		"pk" : 5,
+		"fields" : {
+			"nome" : "Abrir Atendimento",
+			"codigo" : 5
+		}
+	}
+]

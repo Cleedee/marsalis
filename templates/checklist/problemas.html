@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}| Problemas de {{ produto.descricao }} {% endblock %}
+
+{% block content %}
+<div class="header">
+	<h3>Relação de Problemas Comuns ao Produto {{ produto.descricao }}</h3>
+</div>
+<div class="content">
+	{% for msg in messages %}
+		<div class="mensagem">{{ msg }}</div>
+	{% endfor %}
+
+	<ul>
+		{% for problema in lista %}
+		<li><a href="/checklist/problema/{{problema.id}}">{{ problema.descricao }}</a></li>
+		{% endfor %}
+	</ul>
+	
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+Usuário encaminha problema via um Chamado ao Helpdesk.
+
+Usuário escolhe o produto (internet, sgp, expresso, sfp, ponto, etc) referente ao problema e descreve o que está acontecendo.
+
+O suporte de helpdesk ao atender o chamado, localiza o tipo de problema baseado no produto e na descrição do chamado.
+
+Cada tipo de problema deveria ter um checklist. Caso não tenha, o chamado é imediatamente passado para a equipe técnica responsável. Os técnicos são os responsáveis por criar checklists.
+
+Havendo um checklist, o suporte fará perguntas ao usuário com vistas a solucionar o problema ou pelo menos descobrir a causa do mesmo para que os técnicos tenham agilidade de corrigi-lo.
+
+Um checklist é uma árvore de perguntas com respostas basicamente de sim e não.
+
+A folha desta árvore ou é um roteiro ou um encaminhamento para um técnico.
+
+Um roteiro de solução pode ser privativo dos técnicos.
+
+Privativo significa que a solução está acima do conhecimento ou responsabilidade da equipe de helpdesk.

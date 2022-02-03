@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+	terrafirma1.0 by nodethirtythree design
+	http://www.nodethirtythree.com
+
+-->
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<title>Marsalis {% block title %}{% endblock %}</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}default.css" />
+</head>
+<body>
+
+<div id="outer">
+
+	<div id="upbg"></div>
+
+	<div id="inner">
+
+		<div id="header">
+			<h1><span>Marsalis</span><sup>0.1</sup></h1>
+			<h2>by OpenTech	</h2>
+		</div>
+	
+		<div id="splash"></div>
+	
+		<div id="menu">
+			<ul>
+				<li class="first"><a href="/">Home</a></li>
+				<li><a href="/servico/chamado/novo">Novo Chamado</a></li>
+				<li><a href="/servico/chamado/central">Chamados</a></li>
+				<li><a href="#">Relatórios</a></li>
+				<li><a href="/checklist">Checklist</a></li>
+				{% if user.is_authenticated %}
+				<li><a href="{% url sair %}">Sair</a></li>
+				{% else %}
+				<li><a href="{% url entrar %}">Entrar</a></li>
+				{% endif %}
+			</ul>
+
+		<div id="date">{% now "l, j \de M \de Y"%}</div>
+		</div>
+	
+
+		<div id="primarycontent">
+		
+			<!-- primary content start -->
+		
+			<div class="post">
+				{% block content %}
+				{% endblock %}
+			</div>
+		
+			<!-- primary content end -->
+	
+		</div>
+		
+		<div id="secondarycontent">
+
+			<!-- secondary content start -->
+		
+			<h3>Sobre o Projeto</h3>
+			<div class="content">
+				<!--
+				<img src="images/pic2.jpg" class="picB" alt="" />
+				-->
+				<p><strong>Marsalis</strong> é o primeiro projeto da Opentech em desenvolvimento de software. O objetivo é desenvolver um sistema de helpdesk com ordem de serviço a ser utilizado em ambientes de suporte técnico de rede e suporte de sistemas corporativos, bem como testar o framework de desenvolvimento web Django, para tornar-se sua ferramenta de fato.</p>
+			</div>
+			
+			<!-- secondary content end -->
+
+		</div>
+	
+		<div id="footer">
+		
+			&copy; Marsalis. All rights reserved. Design by <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a>.
+		
+		</div>
+
+	</div>
+
+</div>
+
+</body>
+</html>

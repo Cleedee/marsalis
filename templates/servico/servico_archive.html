@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}| Central de Chamados {% endblock %}
+
+{% block content %}
+	<div class="header">
+		<h3>Central de Chamados</h3>
+	</div>
+	<div class="content">
+		{% for msg in messages %}
+			<div class="mensagem">{{ msg }}</div>
+		{% endfor %}
+		<table>
+		<thead>
+			<tr>
+				<th>Protocolo</th>
+				<th>Sumário</th>
+				<th>Cliente</th>
+				<th>Data</th>
+				<td> # </th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for chamado in latest %}
+			<tr>
+				<td>{{ chamado.protocolo }}</td>
+				<td>{{ chamado.sumario|truncatewords:3 }}</td>
+				<td>{{ chamado.cliente.email }}</td>
+				<td>{{ chamado.data_inicio|date:"d.m.Y G:i" }}</td>
+				<td><a href="{{ chamado.get_absolute_url }}">Detalhar</a></td>
+			</tr>
+		{% endfor %}	
+		</tbody>
+		</table>
+	</div>
+{% endblock %}

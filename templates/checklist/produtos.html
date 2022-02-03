@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}| Checklist {% endblock %}
+
+{% block content %}
+<div class="header">
+	<h3>Produtos Atendidos Pelo Helpdesk</h3>
+</div>
+<div class="content">
+	{% for msg in messages %}
+		<div class="mensagem">{{ msg }}</div>
+	{% endfor %}
+
+	<ul>
+		{% for produto in produtos %}
+		<li><a href="problemas/{{produto.id}}">{{ produto.descricao }}</a></li>
+		{% endfor %}
+	</ul>
+	
+</div>
+{% endblock %}

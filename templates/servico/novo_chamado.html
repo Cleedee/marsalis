@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}| Novo Chamado {% endblock %}
+
+{% block content %}
+<div class="header">
+	<h3>Novo Chamado</h3>
+</div>
+<div class="content">
+	{% for msg in messages %}
+		<div class="mensagem">{{ msg }}</div>
+	{% endfor %}
+	<form action="" method="post" accept-charset="utf-8">
+		<table>
+		{{ form_novo_chamado }}
+		</table>
+		<p><input type="submit" value="Cadastrar"></p>
+	</form>
+</div>
+{% endblock %}

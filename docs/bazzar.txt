@@ -1,0 +1,27 @@
+CRIANDO BRANCH DO PROJETO NO LAUNCHPAD PARA A MÁQUINA
+
+bzr branch lp:~opentech/marsalis/trunk
+
+AUTENTICAR-SE NO SERVIDOR REMOTO
+
+bzr launchpad-login seu_usuario_no_launchpad (uma vez só é suficiente)
+
+VERSIONANDO UM NOVO ARQUIVO/PASTA
+
+bzr add arquivo
+
+PUBLICANDO MODIFICAÇÕES NO SEU BRANCH LOCAL
+
+bzr commit -m "Comentário sobre a release"
+
+PUBLICANDO MODIFICAÇÕES NO SERVIDOR REMOTO
+
+bzr push lp:~opentech/marsalis/trunk
+
+ATUALIZAR COPIA LOCAL
+
+bzr pull lp:~opentech/marsalis/trunk
+
+CALCULAR DIVERGENCIAS ENTRE BRANCHES
+
+bzr merge lp:~opentech/marsalis/trunk

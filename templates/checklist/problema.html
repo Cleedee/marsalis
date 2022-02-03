@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}| Problema {% endblock %}
+
+{% block content %}
+<div class="header">
+	<h3>Checklist para este Problema</h3>
+</div>
+<div class="content">
+	{% for msg in messages %}
+		<div class="mensagem">{{ msg }}</div>
+	{% endfor %}
+	
+	{% if not node %}
+	
+	<form action="/checklist/criar_checklist" method="post" accept-charset="utf-8">
+		{{ form.as_p }}
+
+		<p><input type="submit" value="Criar Checklist" /></p>
+	</form>
+	
+	{% else %}
+	
+	<b>Pergunta:</b> <br/>{{ node.pergunta }} <br/><br/>
+	
+	<b>Resposta:</b><br/>
+	
+	<b>SIM:</b> {{ node.node_sim.tipo_display }}
+	{% ifequal node.node_sim.tipo 4 %}
+		<a href="/checklist/criar_roteiro/{{node.id}}/SIM/">Criar Roteiro</a>
+		<a href="/checklist/criar_pergunta/{{node.id}}/SIM/">Criar Pergunta</a>
+	{% endifequal %}
+	{% ifequal node.node_sim.tipo 3 %}
+		{{ node.node_sim.texto }}
+	{% endifequal %}
+	<br/>
+	<b>NÃO:</b> {{ node.node_nao.tipo_display }}
+	{% ifequal node.node_nao.tipo 4 %}
+		<a href="/checklist/criar_roteiro/{{node.id}}/NAO/">Criar Roteiro</a>
+		<a href="/checklist/criar_pergunta/{{node.id}}/NAO/">Criar Pergunta</a>
+	{% endifequal %}
+	{% ifequal node.node_nao.tipo 3 %}
+		{{ node.node_nao.texto }}
+	{% endifequal %}
+	
+	{% endif %}
+	
+</div>
+{% endblock %}

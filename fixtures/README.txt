@@ -1,0 +1,1 @@
+http://docs.djangoproject.com/en/dev/howto/initial-data/#howto-initial-data
